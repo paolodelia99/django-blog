@@ -1,12 +1,40 @@
-{% load static %}
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% extends 'base.html' %}
 
-{% if latest_posts %}
-    <ul>
-        {% for post in latest_posts %}
-            <li>{{ post.title }}</li>
-        {% endfor %}
-        </ul>
-{% else %}
-    <p>No posts are available.</p>
-{% endif %}
+{% block content %}
+
+      <!-- Page Header -->
+  <header class="masthead home-blog-img">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Paolown's Blog</h1>
+            <span class="subheading">Random thought of a coder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col container mt-4">
+                {% if latest_posts %}
+                    {% for post in latest_posts %}
+                        <div class="card my-3">
+                          <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.sub_title }}</p>
+                            <a href="{% url 'blog:post' post.id %}" class="btn btn-primary">Go somewhere</a>
+                          </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No posts are available.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

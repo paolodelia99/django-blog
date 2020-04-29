@@ -1,0 +1,41 @@
+/*MAIN BLOG PAGE*/
+.home-blog-img{
+    background-image: url("../img/home-bg.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*ABOUT PAGE*/
+.about-bg-img{
+    background-image: url("../img/about-bg.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*CONTACT PAGE*/
+.contact-bg-img{
+    background-image: url("../img/contact-bg.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*POST*/
+.sample-background{
+    background-image: url("../img/workspace-bg-img.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+}
+
+/*FOOTER*/
+footer {
+    display: block;
+}
+
+.blog-footer{
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
